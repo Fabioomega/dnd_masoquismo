@@ -1,6 +1,6 @@
 import requests
 
-prefix = "https://raw.githubusercontent.com/5e-bits/5e-database/main/src/"
+prefix = "https://raw.githubusercontent.com/5eg-bits/5e-database/main/src/"
 
 suffix = [
     "5e-SRD-Ability-Scores.json",
