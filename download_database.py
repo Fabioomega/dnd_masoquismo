@@ -1,5 +1,11 @@
 import requests
 
+print("Tem certeza que deseja baixar os arquivos? Ele vai substituir os atuais!")
+print("Digite S")
+inp = input()
+if inp != "S" and inp != "s":
+    exit()
+
 prefix = "https://raw.githubusercontent.com/5eg-bits/5e-database/main/src/"
 
 suffix = [

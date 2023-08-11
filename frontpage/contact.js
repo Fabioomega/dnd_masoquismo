@@ -16,20 +16,21 @@ races.then((races_json) => {
   let parent = document.getElementById("options");
 
   for (const race of races_json) {
-    let node = document.createElement("select");
-    node.onfocus = "updateContent(this);";
-    node.onchange = "updateContent(this);";
+    const node = document.createElement("select");
     node.id = race.index;
 
-    let main_option = document.createElement("option");
-    let option_text = document.createTextNode(race.index);
+    node.setAttribute("onfocus", "updateContent(this);");
+    node.setAttribute("onchange", "updateContent(this);");
+
+    const main_option = document.createElement("option");
+    const option_text = document.createTextNode(race.index);
     main_option.appendChild(option_text);
     node.appendChild(main_option);
 
     parent.appendChild(node);
 
-    let padding = document.createElement("br");
-    let padding2 = document.createElement("br");
+    const padding = document.createElement("br");
+    const padding2 = document.createElement("br");
     parent.appendChild(padding);
     parent.appendChild(padding2);
   }
@@ -37,10 +38,10 @@ races.then((races_json) => {
 
 sub_races.then((races_json) => {
   for (const subrace of races_json) {
-    let parent = document.getElementById(subrace.race.index);
+    const parent = document.getElementById(subrace.race.index);
 
-    let option = document.createElement("option");
-    let option_text = document.createTextNode(subrace.index);
+    const option = document.createElement("option");
+    const option_text = document.createTextNode(subrace.index);
     option.appendChild(option_text);
     parent.appendChild(option);
   }
