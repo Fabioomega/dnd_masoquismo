@@ -7,6 +7,7 @@ const updateContent = (ele) => {
 const races = fetch("../source/5e-SRD-Races.json").then((response) => {
   return response.json();
 });
+//assd
 
 const sub_races = fetch("../source/5e-SRD-Subraces.json").then((response) => {
   return response.json();
